@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns : xml name space, any tag inside beans tag has default name space provided by this property -->
+<!-- xsi:schemaLocation = any bean in beans namespace has to be validated using spring-beans.xsd -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"		
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id = "redSox" class="com.spring.app.entities.RedSox"></bean>
+	<bean id = "cubs" class="com.spring.app.entities.Cubs"></bean>
+	<bean id = "dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"></bean>
+	
+	<bean id = "getGame" class="com.spring.app.entities.BaseballGame">
+		<property name="awayTeam" ref="redSox"></property>
+		<property name="homeTeam" ref="cubs"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+</beans>

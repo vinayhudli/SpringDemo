@@ -1,7 +1,12 @@
 package com.spring.app.entities;
 
+import java.sql.SQLException;
+
 import javax.sql.DataSource;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BaseballGame implements Game{
 	
 	private Team homeTeam ;
@@ -15,8 +20,17 @@ public class BaseballGame implements Game{
 		this.awayTeam = awayTeam ;
 	}
 	
-	public void setDataSource(DataSource dataSource) {
+	public void setDataSource(DataSource dataSource) throws SQLException {
 		this.dataSource = dataSource;
+//		this.dataSource.getConnection() ;
+	}
+	
+	public void startGame(){
+		System.out.println("starting game");
+	}
+	
+	public void endGame(){
+		System.out.println("ending game");
 	}
 	
 	public DataSource getDataSource() {
