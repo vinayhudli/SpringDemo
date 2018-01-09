@@ -38,15 +38,15 @@ public class AppConfiguration {
 	@Qualifier("cubs")	//qualifier is the name of the component class with first letter in small case
 	private Team home ;
 	
-	@Bean
-	public Team redSox(){
-		return new RedSox() ;
-	}
+//	@Bean
+//	public Team redSox(){
+//		return new RedSox() ;
+//	}
 	
-	@Bean
-	public Team Cubs(){
-		return new Cubs() ;
-	}
+//	@Bean
+//	public Team cubs(){
+//		return new Cubs() ;
+//	}
 	
 //	@Bean(initMethod="startGame", destroyMethod="endGame")
 	@Bean

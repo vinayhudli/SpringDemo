@@ -4,9 +4,6 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class BaseballGame implements Game{
 	
 	private Team homeTeam ;

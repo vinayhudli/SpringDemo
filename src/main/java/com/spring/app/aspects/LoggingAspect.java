@@ -19,7 +19,7 @@ public class LoggingAspect {
 //		log.info("Called "+method+" with arg "+args+" on "+joinPoint.getTarget());
 //	}
 	
-	@Around("execution(String playGame())")				//used as aspect before and after execution of the method
+//	@Around("execution(String playGame())")				//used as aspect before and after execution of the method
 	public Object aroundCall(ProceedingJoinPoint proceedJoinPoint) throws Throwable{
 		boolean rain = Math.random() < 0.5 ;
 		Object result = null ;
